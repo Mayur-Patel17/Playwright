@@ -6,6 +6,10 @@ class LoginPage:
         self.password = page.locator("#password")
         self.login_button = page.locator("#login-button")
 
+        self.error_message = page.locator(
+            "[data-test='error']"
+        )
+
     def login(self, username, password):
         self.username.fill(username)
         self.password.fill(password)
